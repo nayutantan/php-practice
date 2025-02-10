@@ -23,16 +23,12 @@ echo date('現在時刻は、Y年m月d日 H時i分s秒です。');
 // Q4 条件分岐-1 if文
 $device = 'windows' ;
         
-if($device === 'windows') {
-    echo '使用OSは、windowsです。';
-//windowsだったら使用OSは、windowsです。
-}else if($device === 'mac') {
-    echo '使用OSは、macです。';
-//mac」だったら、「使用OSは、macです。」
-}else {
+if($device === 'windows'|| $device === 'mac') {
+    echo '使用OSは、' . $device . 'です。';
+} else {
     echo 'どちらでもありません。';
 }
-//上記2つ以外だったら、「どちらでもありません。
+
 
 
 // Q5 条件分岐-2 三項演算子
@@ -43,7 +39,7 @@ echo $message;
 
 
 // Q6 配列
-$tokyoarea = ['東京都' , '埼玉県' , '群馬県' , '栃木県' , '千葉県' , '茨城県' , '神奈川県'];
+$tokyoarea = ['東京都', '埼玉県', '群馬県', '栃木県', '千葉県', '茨城県', '神奈川県'];
 echo  $tokyoarea[3] . 'と' . $tokyoarea[4] . 'は関東地方の都道府県です。';
 
 
@@ -80,11 +76,11 @@ foreach ($tokyoarea as $prefecture => $city) {
 // Q10 関数-1
 function hello($name)
   {
-    echo $name . 'さん、こんにちは。' . "\n";
+    return $name . 'さん、こんにちは。' . "\n";
   }
 
-hello('金谷');
-hello('安藤');
+echo hello('金谷');
+echo hello('安藤');
 
 
 // Q11 関数-2
