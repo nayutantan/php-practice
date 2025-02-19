@@ -3,7 +3,7 @@
 echo '1から100までのカウントを開始します'."\n";
 echo "\n";
 
-for ($i=1; $i<=100; $i++){
+for ($i = 1; $i <= 100; $i ++){
     if($i % 4 == 0 && $i % 5 == 0){
     echo ('tic-tac'."\n");
 }
@@ -42,15 +42,15 @@ $personalInfos = [
 echo $personalInfos[1]['name'].'の電話番号は'.$personalInfos[1]['tel'].'です。';
 
 //問題２
-foreach ($personalInfos as $x => $y) {
-    echo ($x+1).'番目の'.$personalInfos[$x]['name'].'メールアドレスは'.$personalInfos[$x]['mail'].'で、電話番号は'.$personalInfos[$x]['tel'].'です。'."\n";
+foreach ($personalInfos as $order => $y) {
+    echo ($order+1).'番目の'.$personalInfos[$order]['name'].'メールアドレスは'.$personalInfos[$order]['mail'].'で、電話番号は'.$personalInfos[$order]['tel'].'です。'."\n";
 }
 
 //問題３
 $ageList = [25, 30, 18];
 
-foreach ($ageList as $x => $y){
-$personalInfos[$x]['age'] = $y;
+foreach ($ageList as $order => $age){
+    $personalInfos[$order]['age'] = $age;
 }
 
 var_dump($personalInfos);
@@ -61,11 +61,13 @@ class Student
 {
     public $studentId;
     public $studentName;
+    public $gender;
 
-    public function __construct($id, $name)
+    public function __construct($id, $name,$gender)
     {
         $this->studentId = $id;
         $this->studentName = $name;
+        $this->gender
     }
 
     public function attend()
