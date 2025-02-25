@@ -39,22 +39,22 @@ echo $message;
 
 
 // Q6 配列
-$tokyoarea = ['東京都', '埼玉県', '群馬県', '栃木県', '千葉県', '茨城県', '神奈川県'];
-echo  $tokyoarea[3] . 'と' . $tokyoarea[4] . 'は関東地方の都道府県です。';
+$tokyoArea = ['東京都', '埼玉県', '群馬県', '栃木県', '千葉県', '茨城県', '神奈川県'];
+echo  $tokyoArea[3] . 'と' . $tokyoArea[4] . 'は関東地方の都道府県です。';
 
 
 // Q7 連想配列-1
-$tokyoarea = ['東京都' => '新宿区', '埼玉県' => 'さいたま市', '群馬県' => '前橋市', '栃木県' => '宇都宮市', '千葉県' => '千葉市', '茨城県' => '水戸市', '神奈川県' => '横浜市'];
+$tokyoArea = ['東京都' => '新宿区', '埼玉県' => 'さいたま市', '群馬県' => '前橋市', '栃木県' => '宇都宮市', '千葉県' => '千葉市', '茨城県' => '水戸市', '神奈川県' => '横浜市'];
 
-foreach ($tokyoarea as $prefecture => $city) {
+foreach ($tokyoArea as $prefecture => $city) {
     echo $city . "\n";
 }
 
 
 // Q8 連想配列-2
-$tokyoarea = ['東京都' => '新宿区', '埼玉県' => 'さいたま市', '群馬県' => '前橋市', '栃木県' => '宇都宮市', '千葉県' => '千葉市', '茨城県' => '水戸市', '神奈川県' => '横浜市'];
+$tokyoArea = ['東京都' => '新宿区', '埼玉県' => 'さいたま市', '群馬県' => '前橋市', '栃木県' => '宇都宮市', '千葉県' => '千葉市', '茨城県' => '水戸市', '神奈川県' => '横浜市'];
 
-foreach ($tokyoarea as $prefecture => $city) {
+foreach ($tokyoArea as $prefecture => $city) {
     if($prefecture === '埼玉県'){
         echo $prefecture . 'の県庁所在地は、' . $city . 'です。';
     }
@@ -62,11 +62,11 @@ foreach ($tokyoarea as $prefecture => $city) {
 
 
 // Q9 連想配列-3
-$tokyoarea = ['東京都' => '新宿区', '埼玉県' => 'さいたま市', '群馬県' => '前橋市', '栃木県' => '宇都宮市', '千葉県' => '千葉市', '茨城県' => '水戸市', '神奈川県' => '横浜市', '新潟県' => '新潟市', '愛知県' => '名古屋市'];
+$tokyoArea = ['東京都' => '新宿区', '埼玉県' => 'さいたま市', '群馬県' => '前橋市', '栃木県' => '宇都宮市', '千葉県' => '千葉市', '茨城県' => '水戸市', '神奈川県' => '横浜市', '新潟県' => '新潟市', '愛知県' => '名古屋市'];
 
-foreach ($tokyoarea as $prefecture => $city) {
-    if($prefecture === '東京都' || $prefecture==='埼玉県' || $prefecture === '群馬県' || $prefecture === '栃木県' || $prefecture === '千葉県' || $prefecture === '茨城県' || $prefecture === '神奈川県'){
-        echo $prefecture . 'の県庁所在地は、' . $$city . 'です。' . "\n";
+foreach ($tokyoArea as $prefecture => $city) {
+    if($prefecture === '東京都' || $prefecture === '埼玉県' || $prefecture === '群馬県' || $prefecture === '栃木県' || $prefecture === '千葉県' || $prefecture === '茨城県' || $prefecture === '神奈川県'){
+        echo $prefecture . 'の県庁所在地は、' . $city . 'です。' . "\n";
     }else{
         echo $prefecture . 'は関東地方ではありません。' . "\n";
     }
@@ -86,10 +86,10 @@ echo hello('安藤');
 // Q11 関数-2
 function calcTaxInPrice($price) {
   $taxInPrice = $price * 1.1;
-  echo $price . 'の商品の税込価格は' . $taxInPrice . '円です。';
+  return $price . 'の商品の税込価格は' . $taxInPrice . '円です。';
 }
 
-calcTaxInPrice(1000);
+echo calcTaxInPrice(1000);
 
 
 // Q12 関数とif文
