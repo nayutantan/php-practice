@@ -42,8 +42,8 @@ $personalInfos = [
 echo $personalInfos[1]['name'].'の電話番号は'.$personalInfos[1]['tel'].'です。';
 
 //問題２
-foreach ($personalInfos as $order => $y) {
-    echo ($order+1).'番目の'.$personalInfos[$order]['name'].'メールアドレスは'.$personalInfos[$order]['mail'].'で、電話番号は'.$personalInfos[$order]['tel'].'です。'."\n";
+foreach ($personalInfos as $order => $person) {
+    echo ($order+1).'番目の'.$person['name'].'メールアドレスは'.$person['mail'].'で、電話番号は'.$person['tel'].'です。'."\n";
 }
 
 //問題３
